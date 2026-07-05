@@ -1,0 +1,104 @@
+{
+  "profit_regressor": {
+    "type": "linear_regression",
+    "features": [
+      "units_sold",
+      "unit_sell",
+      "unit_cost",
+      "Volume",
+      "Classification"
+    ],
+    "target": "gross_profit",
+    "intercept": -3.716651017905974,
+    "coefficients": {
+      "units_sold": 2.505114277934726,
+      "unit_sell": 0.16506584109427286,
+      "unit_cost": 0.004922782309349786,
+      "Volume": 0.03277742637229425,
+      "Classification": -1.3490910488726326
+    },
+    "validation_mae": 25.95733756037986,
+    "validation_rmse": 84.04852223996221,
+    "validation_r2": 0.4742951562969049
+  },
+  "reorder_classifier": {
+    "type": "logistic_regression",
+    "features": [
+      "daily_demand",
+      "end_onhand",
+      "inventory_turnover",
+      "sell_through_pct",
+      "days_of_supply"
+    ],
+    "target": "needs_reorder",
+    "intercept": -22.627187691645677,
+    "coefficients": {
+      "daily_demand": 5.151152699991859,
+      "end_onhand": -34.730434750401685,
+      "inventory_turnover": -0.1511725384186184,
+      "sell_through_pct": 0.5584562491134059,
+      "days_of_supply": -9.827150340679026
+    },
+    "scaler_mean": {
+      "daily_demand": 0.14514756944444443,
+      "end_onhand": 17.458770833333332,
+      "inventory_turnover": 0.4905436591881379,
+      "sell_through_pct": 7.1591676773972,
+      "days_of_supply": 4000.9842796520893
+    },
+    "scaler_scale": {
+      "daily_demand": 0.42827150600161196,
+      "end_onhand": 35.70608328407289,
+      "inventory_turnover": 1.7229259259687537,
+      "sell_through_pct": 14.423188928584372,
+      "days_of_supply": 4765.9295053592605
+    },
+    "validation_accuracy": 0.9954166666666666,
+    "validation_precision": 0.9648985959438378,
+    "validation_recall": 0.991980753809142,
+    "positive_rate": 0.10395
+  },
+  "discontinue_classifier": {
+    "type": "logistic_regression",
+    "features": [
+      "units_sold",
+      "end_onhand",
+      "days_of_supply",
+      "sell_through_pct",
+      "inventory_turnover",
+      "gross_margin_pct"
+    ],
+    "target": "discontinue_candidate",
+    "intercept": -8.097530014608934,
+    "coefficients": {
+      "units_sold": -55.59858918119951,
+      "end_onhand": 24.49061073792831,
+      "days_of_supply": -1.1876275201578395,
+      "sell_through_pct": -0.6509709989333766,
+      "inventory_turnover": -5.497587954438649,
+      "gross_margin_pct": -0.02087688205915595
+    },
+    "scaler_mean": {
+      "units_sold": 8.956625,
+      "end_onhand": 17.5730625,
+      "days_of_supply": 3999.3853407138213,
+      "sell_through_pct": 7.211665228748017,
+      "inventory_turnover": 0.48500452615859185,
+      "gross_margin_pct": 20.904053062285335
+    },
+    "scaler_scale": {
+      "units_sold": 28.052051207402076,
+      "end_onhand": 35.68631967394639,
+      "days_of_supply": 4764.844860893986,
+      "sell_through_pct": 14.536758504008622,
+      "inventory_turnover": 1.270194414553053,
+      "gross_margin_pct": 17.88633256988886
+    },
+    "validation_accuracy": 0.9781666666666666,
+    "validation_precision": 0.9929168180167091,
+    "validation_recall": 0.9608084358523726,
+    "positive_rate": 0.4742
+  },
+  "dos_cap": 9999.0,
+  "n_rows": 60000
+}

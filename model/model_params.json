@@ -1,0 +1,23 @@
+{
+  "target": "SalesQuantity",
+  "features": [
+    "SalesPrice",
+    "Volume",
+    "Classification",
+    "Store",
+    "day_of_week",
+    "day_of_month"
+  ],
+  "intercept": 2.747329765480831,
+  "coefficients": {
+    "SalesPrice": -0.023899834806223954,
+    "Volume": -0.0001888854202302951,
+    "Classification": -0.19810480337316372,
+    "Store": 0.0018347743974591398,
+    "day_of_week": 0.04640799488571326,
+    "day_of_month": 0.01152950536357211
+  },
+  "validation_mae": 1.5986472282664748,
+  "validation_rmse": 3.047293206996935,
+  "n_training_rows": 40000
+}

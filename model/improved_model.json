@@ -1,0 +1,28 @@
+{
+  "model": "RandomForestRegressor",
+  "features": [
+    "SalesPrice",
+    "Volume",
+    "Classification",
+    "Store",
+    "day_of_week",
+    "day_of_month",
+    "is_weekend",
+    "price_per_ml",
+    "store_freq"
+  ],
+  "validation_mae": 1.5312410440381636,
+  "validation_rmse": 2.96588033369922,
+  "validation_r2": 0.06725394164776444,
+  "feature_importance": {
+    "SalesPrice": 0.25365914297635445,
+    "day_of_month": 0.17912547501673454,
+    "store_freq": 0.16808133929634972,
+    "Store": 0.14041324996587984,
+    "price_per_ml": 0.13078389258318932,
+    "day_of_week": 0.07648001959302471,
+    "Volume": 0.020221153742228812,
+    "Classification": 0.01813493924079013,
+    "is_weekend": 0.013100787585448505
+  }
+}
